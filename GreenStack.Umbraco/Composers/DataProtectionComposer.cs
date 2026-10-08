@@ -13,7 +13,7 @@ public class DataProtectionComposer : IComposer
         var environment = builder.Services.BuildServiceProvider()
             .GetRequiredService<IHostEnvironment>();
 
-        var keysPath = environment.IsProduction()
+        var keysPath = (environment.IsProduction() || environment.IsStaging())
             ? "/app/keys"
             : Path.Combine(environment.ContentRootPath, "DataProtection-Keys");
 
