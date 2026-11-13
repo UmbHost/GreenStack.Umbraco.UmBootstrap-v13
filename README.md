@@ -6,9 +6,7 @@ A GitHub template repository for Umbraco 13 (LTS) with the [UmBootstrap](https:/
 
 - Umbraco 13 (LTS) on .NET 8
 - UmBootstrap starter kit
-- Forwarded headers middleware for Traefik proxy
-- HTTPS runtime validator removed (SSL terminated by GreenStack)
-- Data protection keys persisted to `/app/keys` in production
+- The [UmbHost GreenStack package](https://www.nuget.org/packages/UmbHost.GreenStack.Umbraco.Configuration), which configures the site for GreenStack when it runs there: forwarded headers, the HTTPS checks and Data Protection keys on shared storage
 - Multi-stage Dockerfile exposing port 8080
 - Docker launch profile (HTTP)
 - Dependabot configured for weekly Umbraco updates
